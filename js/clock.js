@@ -80,6 +80,7 @@ const reset = () => {
     rating.textContent = '00';
     minContent.textContent = '00';
     hours.textContent = '00';
+    stopButton.disabled=true;
 }
 
 
