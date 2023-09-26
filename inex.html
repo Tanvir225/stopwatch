@@ -1,0 +1,73 @@
+<!DOCTYPE html >
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop-Watch</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css"
+      rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/d7bf1e31f7.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/clock.png" type="image/x-icon">
+  </head>
+  <body>
+    <header class="mt-16 container mx-auto px-5">
+      <h2 class="text-5xl text-center font-bold text-yellow-500 bg-neutral-950 p-5 font-mono"><i class="fa-regular fa-clock fa-xl" style="color: #bb18a8;"></i> Stop-Watch <i class="fa-solid fa-clock fa-xl" style="color: #3f3b7f;"></i> </h2>
+      <hr class="w-1/2 mx-auto mt-5">
+    </header>
+    <main class="px-4">
+      <section class="text-center mt-5">
+        <div class="grid grid-flow-col justify-center gap-5 text-center auto-cols-max">
+          
+          <div
+            class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span class="font-mono text-5xl">
+              <span style="" id="hours">00</span>
+            </span>
+            hours
+          </div>
+          <div
+            class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span class="font-mono text-5xl">
+              <span style="" id="min">00</span>
+            </span>
+            min
+          </div>
+          <div
+            class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+            <span class="font-mono text-5xl">
+              <span style="" id="count">00</span>
+            </span>
+            sec
+          </div>
+        </div>
+
+        <div class="mt-10 space-x-5 space-y-5">
+          <button class="btn btn-accent px-10" id="start" onclick="start()">Start</button>
+          <button class="btn btn-warning px-10" id="stop" onclick="stop()">Stop</button>
+          <button class="btn btn-secondary px-10" id="reset" onclick="reset()">Reset</button>
+        </div>
+      </section>
+
+      <section class="mt-10 ">
+        <div class>
+          <table class="table w-9/12 mx-auto text-center">
+            <!-- head -->
+            <thead>
+              <tr>
+                <th>SL</th>
+                <th>Lap</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <!-- row 1 -->
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/clock.js"></script>
+  </body>
+</html>
