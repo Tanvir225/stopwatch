@@ -6,9 +6,13 @@ let sl  = 0
 const rating = document.getElementById('count');
 const minContent = document.getElementById('min');
 const hours = document.getElementById('hours');
+const stopButton = document.getElementById('stop');
+stopButton.disabled=true;
+
 const start = () => {
 
     countId = setInterval(() => {
+        stopButton.disabled=false;
         ++count
         if (count === 60) {
             rating.textContent = '00';
@@ -70,7 +74,8 @@ const stop = () => {
 const reset = () => {
     count = 0;
     min=0;
-    hour=0; 
+    hour=0;
+    sl=0; 
     tbody.textContent = '';
     rating.textContent = '00';
     minContent.textContent = '00';
