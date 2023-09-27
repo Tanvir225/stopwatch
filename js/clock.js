@@ -7,11 +7,13 @@ const rating = document.getElementById('count');
 const minContent = document.getElementById('min');
 const hours = document.getElementById('hours');
 const stopButton = document.getElementById('stop');
+const startButton = document.getElementById('start');
 stopButton.disabled=true;
 
 const start = () => {
-
+    
     countId = setInterval(() => {
+        startButton.disabled=true;
         stopButton.disabled=false;
         ++count
         if (count === 60) {
@@ -60,6 +62,7 @@ const start = () => {
 const tbody = document.getElementById('tbody');
 const stop = () => {
     clearInterval(countId);
+    startButton.disabled=false;
     const tr = document.createElement('tr');
     tr.innerHTML = `
     
@@ -81,6 +84,7 @@ const reset = () => {
     minContent.textContent = '00';
     hours.textContent = '00';
     stopButton.disabled=true;
+    startButton.disabled=false;
 }
 
 
